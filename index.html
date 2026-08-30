@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Join Our Telegram Group</title>
+  <meta name="description" content="Join our Telegram group for the latest updates and exclusive content.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top, #172554 0%, #080b16 45%, #05060a 100%);
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0 14px;
+    }
+
+    /* HEADER */
+    header {
+      text-align: center;
+      padding: 28px 0 10px;
+    }
+
+    .logo {
+      width: 72px;
+      height: 72px;
+      margin: auto;
+      border-radius: 22px;
+      background: linear-gradient(135deg, #229ed9, #147fba);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 35px;
+      box-shadow: 0 10px 35px rgba(34, 158, 217, .35);
+    }
+
+    h1 {
+      font-size: 27px;
+      margin-top: 18px;
+    }
+
+    .subtitle {
+      color: #aeb7ca;
+      margin-top: 9px;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    /* =========================================
+       RESPONSIVE AD CONTAINER
+       ========================================= */
+
+    .ad-wrapper {
+      width: 100%;
+      max-width: 100%;
+      margin: 20px auto;
+      padding: 0;
+      overflow: hidden;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      text-align: center;
+
+      /* Prevent horizontal overflow */
+      position: relative;
+    }
+
+    .ad-wrapper > * {
+      max-width: 100% !important;
+    }
+
+    .ad-wrapper iframe,
+    .ad-wrapper img,
+    .ad-wrapper video {
+      max-width: 100% !important;
+      height: auto !important;
+    }
+
+    /* AD LABEL */
+    .ad-label {
+      color: #687184;
+      font-size: 10px;
+      margin-bottom: 6px;
+      text-align: center;
+    }
+
+    /* CARD */
+    .card {
+      background: rgba(255, 255, 255, .055);
+      border: 1px solid rgba(255, 255, 255, .09);
+      border-radius: 24px;
+      padding: 25px;
+      margin: 20px 0;
+      backdrop-filter: blur(15px);
+      box-shadow: 0 15px 45px rgba(0, 0, 0, .25);
+    }
+
+    .telegram-icon {
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      background: #229ed9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 17px;
+      font-size: 30px;
+    }
+
+    .card h2 {
+      text-align: center;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      text-align: center;
+      color: #aeb7ca;
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    /* BUTTON */
+    .main-btn {
+      display: block;
+      width: 100%;
+      border: none;
+      padding: 17px;
+      margin-top: 23px;
+      border-radius: 14px;
+
+      background: linear-gradient(135deg, #229ed9, #167bb5);
+
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+
+      box-shadow: 0 10px 30px rgba(34, 158, 217, .25);
+
+      transition: .2s;
+    }
+
+    .main-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .main-btn:active {
+      transform: scale(.98);
+    }
+
+    /* GATE */
+    #gate {
+      scroll-margin-top: 20px;
+    }
+
+    .gate-title {
+      text-align: center;
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .gate-text {
+      text-align: center;
+      color: #aeb7ca;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    /* TIMER */
+    .timer {
+      width: 110px;
+      height: 110px;
+
+      margin: 25px auto;
+
+      border-radius: 50%;
+      border: 5px solid rgba(34, 158, 217, .2);
+      border-top-color: #229ed9;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 38px;
+      font-weight: bold;
+
+      animation: spin 1s linear infinite;
+    }
+
+    .timer.finished {
+      animation: none;
+      border-color: #22c55e;
+      color: #22c55e;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* RESULT */
+    #result {
+      display: none;
+      text-align: center;
+    }
+
+    .success {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .ready {
+      color: #4ade80;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .small-note {
+      margin-top: 12px;
+      color: #8d96a8;
+      font-size: 12px;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 25px 0 35px;
+      color: #687184;
+      font-size: 12px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 480px) {
+
+      .container {
+        padding: 0 10px;
+      }
+
+      h1 {
+        font-size: 23px;
+      }
+
+      .card {
+        padding: 20px;
+      }
+
+      .timer {
+        width: 100px;
+        height: 100px;
+      }
+
+      .ad-wrapper {
+        margin: 16px auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- HEADER -->
+    <header>
+
+      <div class="logo">
+        ✈️
+      </div>
+
+      <h1>
+        Join Our Telegram
+      </h1>
+
+      <p class="subtitle">
+        Get the latest updates, useful information and exclusive
+        content directly on Telegram.
+      </p>
+
+    </header>
+
+
+    <!-- =========================================
+         TOP AD
+         ========================================= -->
+
+    <div class="ad-label">
+      <script async="async" data-cfasync="false" src="https://pl31089760.profitableratecpmnetwork.com/207e0a6e2acbfd4388d9ae9860874b84/invoke.js"></script>
+<div id="container-207e0a6e2acbfd4388d9ae9860874b84"></div>
+
+    </div>
+
+    <div class="ad-wrapper">
+
+      <!-- YOUR AD CODE -->
+      <script async="async"
+        data-cfasync="false"
+        src="https://pl31089760.profitableratecpmnetwork.com/207e0a6e2acbfd4388d9ae9860874b84/invoke.js">
+      </script>
+
+      <div id="container-207e0a6e2acbfd4388d9ae9860874b84"></div>
+
+    </div>
+
+
+    <!-- TELEGRAM INFO -->
+    <section class="card">
+
+      <div class="telegram-icon">
+        ✈️
+      </div>
+
+      <h2>
+        Our Telegram Group
+      </h2>
+
+      <p>
+        Join our Telegram community to receive the latest
+        updates, announcements and exclusive content.
+      </p>
+
+      <button
+        class="main-btn"
+        onclick="startGate()">
+
+        CLICK HERE
+
+      </button>
+
+    </section>
+
+
+    <!-- TIMER GATE -->
+    <section
+      id="gate"
+      class="card">
+
+      <div id="waiting">
+
+        <h2 class="gate-title">
+          Please Wait
+        </h2>
+
+        <p class="gate-text">
+          Your Telegram link is being prepared...
+        </p>
+
+        <div
+          id="timer"
+          class="timer">
+
+          10
+
+        </div>
+
+      </div>
+
+
+      <!-- =========================================
+           MIDDLE AD
+           ========================================= -->
+
+      <div class="ad-label">
+        Advertisement
+      </div>
+
+      <div class="ad-wrapper">
+
+        <!-- YOUR AD CODE -->
+        <script async="async"
+          data-cfasync="false"
+          src="https://pl31089760.profitableratecpmnetwork.com/207e0a6e2acbfd4388d9ae9860874b84/invoke.js">
+        </script>
+
+        <div id="container-207e0a6e2acbfd4388d9ae9860874b84-middle"></div>
+
+      </div>
+
+
+      <!-- RESULT -->
+      <div id="result">
+
+        <div class="success">
+          ✅
+        </div>
+
+        <div class="ready">
+          Your Telegram Link Is Ready!
+        </div>
+
+        <p class="small-note">
+          Click the button below to join the Telegram group.
+        </p>
+
+        <a
+          id="telegramButton"
+          class="main-btn"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          ✈️ JOIN TELEGRAM
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         BOTTOM AD
+         ========================================= -->
+
+    <div class="ad-label">
+      Advertisement
+    </div>
+
+    <div class="ad-wrapper">
+
+      <!-- YOUR AD CODE -->
+      <script async="async"
+        data-cfasync="false"
+        src="https://pl31089760.profitableratecpmnetwork.com/207e0a6e2acbfd4388d9ae9860874b84/invoke.js">
+      </script>
+
+      <div id="container-207e0a6e2acbfd4388d9ae9860874b84-bottom"></div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+      © 2026 Your Website
+      <br>
+      All Rights Reserved
+
+    </footer>
+
+  </div>
+
+
+  <script>
+
+    /* =========================================
+       TELEGRAM SETTINGS
+       ========================================= */
+
+    const TELEGRAM_LINK =
+      "https://t.me/in_hindi_rw";
+
+
+    /* TIMER */
+
+    const TIMER_SECONDS = 10;
+
+
+    let started = false;
+
+
+    function startGate() {
+
+      if (started) return;
+
+      started = true;
+
+
+      const gate =
+        document.getElementById("gate");
+
+
+      /* Smooth scroll */
+
+      setTimeout(() => {
+
+        gate.scrollIntoView({
+          behavior: "smooth",
+          block: "center"
+        });
+
+      }, 100);
+
+
+      let time = TIMER_SECONDS;
+
+
+      const timer =
+        document.getElementById("timer");
+
+
+      timer.textContent = time;
+
+
+      const countdown =
+        setInterval(() => {
+
+          time--;
+
+          timer.textContent = time;
+
+
+          if (time <= 0) {
+
+            clearInterval(countdown);
+
+            timer.textContent = "✓";
+
+            timer.classList.add("finished");
+
+            showTelegramLink();
+
+          }
+
+        }, 1000);
+
+    }
+
+
+    function showTelegramLink() {
+
+      /* Set Telegram URL */
+
+      document
+        .getElementById("telegramButton")
+        .href = TELEGRAM_LINK;
+
+
+      /* Hide timer */
+
+      document
+        .getElementById("waiting")
+        .style.display = "none";
+
+
+      /* Show button */
+
+      document
+        .getElementById("result")
+        .style.display = "block";
+
+
+      /* Scroll */
+
+      setTimeout(() => {
+
+        document
+          .getElementById("result")
+          .scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+          });
+
+      }, 300);
+
+    }
+
+  </script>
+
+</body>
+</html>
